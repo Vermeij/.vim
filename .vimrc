@@ -1,5 +1,5 @@
 " syntax highlighting
-syntax enable
+" syntax enable
 set background=dark
 
 " show line numbers
@@ -26,12 +26,22 @@ set showmatch
 " UTF8 Support
 set encoding=utf-8
 
-" enable all Python syntax highlighting features
-let python_highlight_all = 1
-
 " Press F9 to run scipt in Python shell
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
 " Set colorscheme
-colorscheme molokai
-highlight Comment cterm=bold
+" colorscheme molokai
+" highlight Comment cterm=bold
+
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'Buffergator'
+Plugin 'Solarized'
+
+filetype plugin indent on
