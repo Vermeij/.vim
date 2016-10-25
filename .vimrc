@@ -27,7 +27,7 @@ set showmatch
 set encoding=utf-8
 
 " Press F9 to run scipt in Python shell
-nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+nnoremap <buffer> <F9> :w<cr> :exec '!python' shellescape(@%, 1)<cr>
 
 " Set colorscheme
 " colorscheme molokai
@@ -43,5 +43,22 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Buffergator'
 Plugin 'Solarized'
+Plugin 'vimux'
 
 filetype plugin indent on
+
+
+" Prompt for a command to run
+map <F4> :VimuxPromptCommand
+
+" Run last command executed by RunVimTmuxCommand
+map <F5> :VimuxRunLastCommand
+
+" Inspect runner pane
+map <F6> :VimuxInspectRunner
+
+" Close all other tmux panes in current window
+map <F7> :VimuxCloseRunner
+
+" Interrupt any command running in the runner pane
+map <F3> :VimuxInterruptRunner
