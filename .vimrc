@@ -1,4 +1,3 @@
-" syntax highlighting
 " syntax enable
 set background=dark
 
@@ -39,7 +38,7 @@ nnoremap <buffer> <F9> :w<cr> :exec '!python' shellescape(@%, 1)<cr>
 
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 Plugin 'gmarik/vundle'
