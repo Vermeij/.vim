@@ -46,6 +46,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'Buffergator'
 Plugin 'Solarized'
 Plugin 'vimux'
+Plugin 'The-Nerd-Commenter'
 
 filetype plugin indent on
 
