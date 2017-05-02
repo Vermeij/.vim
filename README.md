@@ -5,7 +5,8 @@
 
     In .bashrc set: 
 
-    if [! -e "~/.vimrc" ]; then
+    if [ ! -e "~/.vimrc" ]; then
+
         ln -s ~/.vim/.vimrc ~/.vimrc
     fi
 
